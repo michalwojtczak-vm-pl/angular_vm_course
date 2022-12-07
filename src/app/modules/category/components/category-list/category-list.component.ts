@@ -8,7 +8,6 @@ import { CategoryInterface } from '../../interfaces/category.interface';
   styleUrls: ['./category-list.component.scss']
 })
 export class CategoryListComponent implements OnInit {
-  // @ts-ignore
   categories: CategoryInterface[] = [];
   constructor(
       private categoryService: CategoryService
