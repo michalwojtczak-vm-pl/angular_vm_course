@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {CategoryInterface} from "../../../category/interfaces/category.interface";
+import {BookInterface} from "../../interface/book.interface";
+import {BookService} from "../../book.service";
 
 @Component({
   selector: 'app-book-list',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookListComponent implements OnInit {
 
-  constructor() { }
+  books: BookInterface[] = [];
+  displayedColumns: string[] = ['id', 'title'];
 
-  ngOnInit(): void {
+  constructor(private bookService: BookService) {
+
   }
 
+  ngOnInit(): void {
+    this.loadBooks();
+  }
+
+  loadBooks() {
+    this.bookService.loadData().subscribe((result) => {
+      this.books = result;
+    })
+  }
 }

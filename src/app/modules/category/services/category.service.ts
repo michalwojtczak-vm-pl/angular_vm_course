@@ -4,9 +4,8 @@ import { CategoryInterface } from '../interfaces/category.interface';
 
 @Injectable()
 export class CategoryService {
-    constructor(
-        private http: HttpClient
-    ) {
+    constructor(private http: HttpClient) {
+
     }
 
     loadData() {

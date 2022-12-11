@@ -4,6 +4,7 @@ import { BookComponent } from './book.component';
 import { BookListComponent } from './components/book-list/book-list.component';
 import { BookCreateComponent } from './components/book-create/book-create.component';
 import { RouterModule, Routes } from '@angular/router';
+import {MatTableModule} from "@angular/material/table";
 
 const routes: Routes = [
   {
@@ -34,9 +35,10 @@ const routes: Routes = [
     BookListComponent,
     BookCreateComponent
   ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes)
-  ]
+    imports: [
+        CommonModule,
+        RouterModule.forChild(routes),
+        MatTableModule
+    ]
 })
 export class BookModule { }

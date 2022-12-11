@@ -8,10 +8,13 @@ import { CategoryInterface } from '../../interfaces/category.interface';
   styleUrls: ['./category-list.component.scss']
 })
 export class CategoryListComponent implements OnInit {
+
   categories: CategoryInterface[] = [];
-  constructor(
-      private categoryService: CategoryService
-  ) { }
+  displayedColumns: string[] = ['id', 'subject', 'ISBN'];
+
+  constructor(private categoryService: CategoryService) {
+
+  }
 
   ngOnInit(): void {
     this.loadCategories();

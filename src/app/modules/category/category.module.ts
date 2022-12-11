@@ -6,6 +6,7 @@ import { CategoryCreateComponent } from './components/category-create/category-c
 import { CategoryComponent } from './category.component';
 import { CategoryEditComponent } from './components/category-edit/category-edit.component';
 import { CategoryService } from './services/category.service';
+import { MatTableModule } from "@angular/material/table";
 
 //   /categories
 const routes: Routes = [
@@ -45,7 +46,8 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MatTableModule
   ],
   providers: [
     CategoryService

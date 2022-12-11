@@ -9,9 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 export class CategoryEditComponent implements OnInit {
 
   categoryId: number = 0;
-  constructor(
-      private activatedRoute: ActivatedRoute
-  ) { }
+  constructor(private activatedRoute: ActivatedRoute) {
+
+  }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
