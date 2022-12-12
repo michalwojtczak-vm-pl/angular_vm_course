@@ -4,6 +4,8 @@ import { BookComponent } from './book.component';
 import { BookListComponent } from './components/book-list/book-list.component';
 import { BookCreateComponent } from './components/book-create/book-create.component';
 import { RouterModule, Routes } from '@angular/router';
+import {CategoryService} from "../category/services/category.service";
+import {BookService} from "./services/book.service";
 
 const routes: Routes = [
   {
@@ -37,6 +39,9 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
+  ],
+  providers: [
+    BookService
   ]
 })
 export class BookModule { }

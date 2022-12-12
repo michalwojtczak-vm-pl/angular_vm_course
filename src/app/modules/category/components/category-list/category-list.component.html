@@ -1,7 +1,27 @@
-
-
-<div *ngFor="let category of categories">
-    <span>{{category.subject}}</span>
+<h2>Lista kategorii:</h2>
+<div>
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th> ID </th>
+            <th> TITLE </th>
+            <th> SUBJECT </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  *ngFor="let category of categories">
+            <td>{{category.id}}</td>
+            <td>{{category.ISBN}}</td>
+            <td>{{category.subject}}</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
+
+
+
+<!--<div *ngFor="let category of categories">-->
+<!--    <span>{{category.subject}}</span>-->
+<!--</div>-->
 
 <button routerLink="/categories/edit/1" >Przenies mnie do szczegolow kategorii o ID 1</button>
