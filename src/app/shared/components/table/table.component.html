@@ -1,0 +1,13 @@
+<table>
+    <tr>
+        <th *ngFor="let col of columns">
+            {{col}}
+        </th>
+    </tr>
+    <tr *ngFor="let data of tableData">
+        <td>{{data.id}}</td>
+        <td>{{data.subject}}</td>
+        <td>{{data.ISBN}}</td>
+
+    </tr>
+</table>

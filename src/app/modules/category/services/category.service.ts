@@ -12,4 +12,7 @@ export class CategoryService {
     loadData() {
         return this.http.get<CategoryInterface[]>('/api/categories');
     }
+
+    getColumns() : string[] {
+        return ["id", "subject", "ISBN"]};
 }

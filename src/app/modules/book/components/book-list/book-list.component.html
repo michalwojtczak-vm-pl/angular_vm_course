@@ -1,1 +1,7 @@
-<p>book-list works!</p>
+
+
+<div *ngFor="let book of books">
+    <span>{{book.title}}</span>
+</div>
+
+<button routerLink="/book/edit/1"> Przenies mnie do szczegolow ksiazki o ID 1</button>
