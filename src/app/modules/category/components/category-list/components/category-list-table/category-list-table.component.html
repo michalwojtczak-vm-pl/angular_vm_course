@@ -1,0 +1,10 @@
+<table>
+    <tr>
+        <th>ID</th>
+        <th>ISBN</th>
+        <th>Subject</th>
+    </tr>
+    <tr *ngFor="let cat of categories">
+            <app-category-list-row [catego]="cat"></app-category-list-row>
+    </tr>
+</table>

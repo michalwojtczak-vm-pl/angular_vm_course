@@ -1,5 +1,5 @@
-import { CarInterface } from './car.interface';
-import { TypesEnum } from './types.enum';
+import {CarInterface} from './car.interface';
+import {TypesEnum} from './types.enum';
 
 export class NewClass {
     private carName = 'cos tam';
@@ -33,7 +33,7 @@ export class NewClass {
         this.carType = TypesEnum.AUDI; // 'AUDI'
     }
 
-    makeCar(car: { name: string }):boolean {
+    makeCar(car: { name: string }): boolean {
         return true;
     }
 

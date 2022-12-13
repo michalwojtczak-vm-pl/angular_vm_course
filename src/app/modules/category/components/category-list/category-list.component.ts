@@ -1,25 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { CategoryService } from '../../services/category.service';
-import { CategoryInterface } from '../../interfaces/category.interface';
+import {Component, OnInit} from '@angular/core';
+import {CategoryService} from '../../services/category.service';
+import {CategoryInterface} from '../../interfaces/category.interface';
 
 @Component({
-  selector: 'app-category-list',
-  templateUrl: './category-list.component.html',
-  styleUrls: ['./category-list.component.scss']
+    selector: 'app-category-list',
+    templateUrl: './category-list.component.html',
+    styleUrls: ['./category-list.component.scss']
 })
 export class CategoryListComponent implements OnInit {
-  categories: CategoryInterface[] = [];
-  constructor(
-      private categoryService: CategoryService
-  ) { }
+    categories: CategoryInterface[] = [];
 
-  ngOnInit(): void {
-    this.loadCategories();
-  }
+    constructor(
+        private categoryService: CategoryService
+    ) {
+    }
 
-  loadCategories() {
-    this.categoryService.loadData().subscribe((result) => {
-      this.categories = result;
-    })
-  }
+    ngOnInit(): void {
+        this.loadCategories();
+    }
+
+    loadCategories() {
+        this.categoryService.loadData().subscribe((result) => {
+            this.categories = result;
+        })
+    }
 }

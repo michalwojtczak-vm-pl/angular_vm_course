@@ -1,7 +1,18 @@
+<h3>Html category-list</h3>
 
+<table>
+    <tr>
+        <th>ID</th>
+        <th>ISBN</th>
+        <th>Subject</th>
+    </tr>
+    <tr *ngFor="let category of categories">
+        <td>{{category.id}} </td>
+        <td>{{category.ISBN}}</td>
+        <td>{{category.subject}}</td>
+    </tr>
+</table>
 
-<div *ngFor="let category of categories">
-    <span>{{category.subject}}</span>
-</div>
+<button routerLink="/categories/edit/1">Przenies mnie do szczegolow kategorii o ID 1</button>
 
-<button routerLink="/categories/edit/1" >Przenies mnie do szczegolow kategorii o ID 1</button>
+<app-category-list-table></app-category-list-table>

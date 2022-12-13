@@ -5,34 +5,34 @@ Content-Type: text/html; charset=UTF-8
 [
 {
     "id": 1,
-    "title": "Edukacja wczesnoszkolna",
+    "title": "Edukacja wczesnoszkolna"
 },
 {
     "id": 2,
-    "title": "Historia",
+    "title": "Historia"
 },
 {
     "id": 3,
-    "title": "Język angielski",
+    "title": "Język angielski"
 },
 {
     "id": 4,
-    "title": "Język polski",
+    "title": "Język polski"
 },
 {
     "id": 5,
-    "title": "Wiedza o społeczeństwie",
+    "title": "Wiedza o społeczeństwie"
 },
 {
     "id": 6,
-    "title": "Przyroda",
+    "title": "Przyroda"
 },
 {
     "id": 7,
-    "title": "Fizyka",
+    "title": "Fizyka"
 },
 {
     "id": 8,
-    "title": "Geografia",
+    "title": "Geografia"
 }
 ]

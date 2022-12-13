@@ -1,4 +1,4 @@
-import { TypesEnum } from './types.enum';
+import {TypesEnum} from './types.enum';
 
 export interface CarInterface {
     name: string;
