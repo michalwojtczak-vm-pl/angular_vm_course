@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Type: text/html; charset=UTF-8
+
+{
+    "id": 1,
+    "name": "Michał",
+    "email": "michal.wojtczak@vm.pl",
+    "token": "jakis_token_auth"
+}

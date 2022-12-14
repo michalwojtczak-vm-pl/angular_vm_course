@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Type: text/html; charset=UTF-8
+
+[
+{
+    "id": 1,
+    "subject": "Edukacja wczesnoszkolna",
+    "ISBN": "123"
+},
+{
+    "id": 2,
+    "subject": "Historia",
+    "ISBN": "123"
+},
+{
+    "id": 3,
+    "subject": "Język angielski",
+    "ISBN": "123"
+},
+{
+    "id": 4,
+    "subject": "Język polski",
+    "ISBN": "123"
+},
+{
+    "id": 5,
+    "subject": "Wiedza o społeczeństwie",
+    "ISBN": "123"
+},
+{
+    "id": 6,
+    "subject": "Przyroda",
+    "ISBN": "123"
+},
+{
+    "id": 7,
+    "subject": "Fizyka",
+    "ISBN": "123"
+},
+{
+    "id": 8,
+    "subject": "Geografia",
+    "ISBN": "123"
+}
+]
