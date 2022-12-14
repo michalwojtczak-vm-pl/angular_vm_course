@@ -1,1 +1,8 @@
-<p>category-edit works!</p>
+<div [formGroup]="formCategory">
+    <input type="text" class="form-group" formControlName="subject" placeholder="subject">
+    <input type="text" class="form-group" formControlName="ISBN" placeholder="ISBN">
+    <button routerLink="/categories/list">Anuluj</button>
+    <button (click)="save()" [disabled]="!formCategory.valid">Zapisz</button>
+</div>
+
+<button (click)="emit()">Wrzuć skrzynke do rzeczki</button>

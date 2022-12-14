@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Type: text/html; charset=UTF-8
+
+{
+    "id": 1,
+    "subject": "Edukacja wczesnoszkolna",
+    "ISBN": "123"
+}
