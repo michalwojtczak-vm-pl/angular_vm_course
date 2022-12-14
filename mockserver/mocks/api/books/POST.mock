@@ -10,5 +10,5 @@ Content-Type: application/json; charset=utf-8
 
 {
     "id": 1,
-    "subject": "Edukacja wczesnoszkolna"
+    "title": "Edukacja wczesnoszkolna"
 }
