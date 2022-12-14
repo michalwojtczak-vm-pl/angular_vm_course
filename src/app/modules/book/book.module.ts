@@ -5,6 +5,8 @@ import { BookListComponent } from './components/book-list/book-list.component';
 import { BookCreateComponent } from './components/book-create/book-create.component';
 import { RouterModule, Routes } from '@angular/router';
 import {BookService} from "./services/book.service";
+import { BookListTableComponent } from './components/book-list/book-list-table/book-list-table.component';
+import { BookListTableRowComponent } from './components/book-list/book-list-table/book-list-table-row/book-list-table-row.component';
 
 const routes: Routes = [
   {
@@ -33,7 +35,9 @@ const routes: Routes = [
   declarations: [
     BookComponent,
     BookListComponent,
-    BookCreateComponent
+    BookCreateComponent,
+    BookListTableComponent,
+    BookListTableRowComponent
   ],
   imports: [
     CommonModule,
