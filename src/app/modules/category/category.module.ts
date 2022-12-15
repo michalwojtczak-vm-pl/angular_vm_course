@@ -6,8 +6,12 @@ import {CategoryCreateComponent} from './components/category-create/category-cre
 import {CategoryComponent} from './category.component';
 import {CategoryEditComponent} from './components/category-edit/category-edit.component';
 import {CategoryService} from './services/category.service';
-import { CategoryListRowComponent } from './components/category-list/components/category-list-row/category-list-row.component';
-import { CategoryListTableComponent } from './components/category-list/components/category-list-table/category-list-table.component';
+import {
+    CategoryListRowComponent
+} from './components/category-list/components/category-list-row/category-list-row.component';
+import {
+    CategoryListTableComponent
+} from './components/category-list/components/category-list-table/category-list-table.component';
 
 const routes: Routes = [
     {
@@ -48,7 +52,7 @@ const routes: Routes = [
     ],
     imports: [
         CommonModule,
-        RouterModule.forChild(routes)
+        RouterModule.forChild(routes),
     ],
     providers: [
         CategoryService

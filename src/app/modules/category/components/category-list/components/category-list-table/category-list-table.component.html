@@ -4,7 +4,5 @@
         <th>ISBN</th>
         <th>Subject</th>
     </tr>
-    <tr *ngFor="let cat of categories">
-            <app-category-list-row [catego]="cat"></app-category-list-row>
-    </tr>
+    <app-category-list-row *ngFor="let cat of categories" [category]="cat" class="table-row"></app-category-list-row>
 </table>
