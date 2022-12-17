@@ -29,6 +29,10 @@ export class CategoryService {
         return this.http.patch<CategoryInterface>(`/api/categories/${id}`, form.value);
     }
 
+    delete(id: number) {
+        return this.http.delete<CategoryInterface>(`/api/categories/${id}`);
+    }
+
     addRecord(category: CategoryInterface) {
         this.categories.push(category);
     }
@@ -38,6 +42,15 @@ export class CategoryService {
         if (cat) {
             cat.subject = category.subject;
             cat.ISBN = category.ISBN;
+        }
+    }
+
+    deleteRecordById(id : number) {
+        for (let i = 0; i < this.categories.length; i++) {
+            if (id === this.categories[i].id) {
+                this.categories.splice(i,1);
+                break;
+            }
         }
     }
 }

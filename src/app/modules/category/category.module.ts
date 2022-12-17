@@ -8,6 +8,7 @@ import { CategoryEditComponent } from './components/category-edit/category-edit.
 import { CategoryService } from './services/category.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CategorySubsService } from './services/category-subs.service';
+import { CategoryDeleteComponent } from './components/category-delete/category-delete.component';
 
 //   /categories
 const routes: Routes = [
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path: 'edit/:categoryId',
         component: CategoryEditComponent
+      },
+      {
+        path: 'delete/:categoryId',
+        component: CategoryDeleteComponent
       }
     ]
   }
@@ -43,7 +48,8 @@ const routes: Routes = [
     CategoryListComponent,
     CategoryCreateComponent,
     CategoryComponent,
-    CategoryEditComponent
+    CategoryEditComponent,
+    CategoryDeleteComponent
   ],
   imports: [
     CommonModule,
