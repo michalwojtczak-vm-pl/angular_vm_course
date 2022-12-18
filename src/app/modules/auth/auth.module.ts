@@ -22,7 +22,13 @@ const routes: Routes = [
       },
       {
         path: 'login',
-        component: AuthLoginComponent
+        component: AuthLoginComponent,
+        children: [
+          {
+            path: 'success',
+            component: AuthLoginWelcomeComponent
+          }
+        ]
       }
     ]
   }

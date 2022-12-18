@@ -39,7 +39,8 @@ export class AuthLoginComponent implements OnInit {
     this.authService.login(this.formLogin).subscribe((result) => {
       this.authService.login(this.formLogin.value);
       this.user = result;
-      //this.router.navigateByUrl('/categories/list');
+      this.authService.userLogin = result;
+      //this.router.navigateByUrl('/auth/login/success');
     })
 
   }

@@ -2,12 +2,7 @@
 <div [formGroup]="formLogin">
     <input type="text" class="form-group" formControlName="name" placeholder="Name">
     <input type="text" class="form-group" formControlName="email" placeholder="example@abc">
-    <button (click)="login()" [disabled]="!formLogin.valid">Login</button>
+    <button (click)="login()"  [disabled]="!formLogin.valid">Login</button>
 </div>
 
-<div>
-    <h6>Witaj: </h6>
-    <span>Username: {{user.name}} </span>
-    <span>Email: {{user.email}} </span>
-</div>
-
+<router-outlet></router-outlet>

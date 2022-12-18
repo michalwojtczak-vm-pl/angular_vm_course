@@ -6,11 +6,13 @@ import {AuthInterface} from "../interfaces/auth-interface";
 
 @Injectable()
 export class AuthService {
-
+userLogin! : AuthInterface;
   constructor(private http: HttpClient) { }
 
   login(form: FormGroup) {
     return this.http.post<AuthInterface>('/api/auth/login', form.value);
   }
+
+
 }
 
