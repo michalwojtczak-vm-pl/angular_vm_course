@@ -40,4 +40,8 @@ export class CategoryService {
             cat.ISBN = category.ISBN;
         }
     }
+
+    deleteRecord(id: number){
+        this.categories = this.categories.filter(obj => obj.id !== id);
+    }
 }

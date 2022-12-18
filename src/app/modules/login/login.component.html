@@ -1,0 +1,10 @@
+
+<div [formGroup]="fromLogin">
+    <!--<label for="email">Email:</label><br>-->
+    <input type="text" class="email" id="email" formControlName="email" placeholder="email">
+    <!--<label for="password">Password:</label><br>-->
+    <input type="text" class="form-group" id="password" formControlName="password" placeholder="password">
+    <br>
+    <button (click)="login()" [disabled]="!fromLogin.valid">Zaloguj</button>
+    <button routerLink="/login/register" [disabled]="!fromLogin.valid">Rejestracja</button>
+</div>

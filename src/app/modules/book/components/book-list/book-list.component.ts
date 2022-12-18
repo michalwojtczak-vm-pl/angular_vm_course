@@ -1,26 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BookService} from "../../services/book.service";
 import {BookInterface} from "../../interfaces/book.interface";
 
 @Component({
-  selector: 'app-book-list',
-  templateUrl: './book-list.component.html',
-  styleUrls: ['./book-list.component.scss'],
+    selector: 'app-book-list',
+    templateUrl: './book-list.component.html',
+    styleUrls: ['./book-list.component.scss'],
 })
 export class BookListComponent implements OnInit {
-  books: BookInterface[] = [];
 
-  constructor(
-      private bookService: BookService
-  ) {}
+    constructor(
+        private bookService: BookService
+    ) {
+    }
 
-  ngOnInit(): void {
-    this.loadData();
-  }
+    ngOnInit(): void {
+        if(!this.books.length){
+            this.loadBooks();
+        }
+    }
 
-  loadData(): void {
-    this.bookService.loadData().subscribe(book => {
-      this.books = book;
-    });
-  }
+    get books(): BookInterface[]{
+        return this.bookService.books;
+    }
+
+    loadBooks(): void {
+        this.bookService.loadData();
+    }
 }

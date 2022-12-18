@@ -6,7 +6,8 @@
             <th>ID</th>
             <th>Name</th>
             <th>ISBN</th>
-            <th>Action</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -15,6 +16,7 @@
             <td>{{category.subject}}</td>
             <td>{{category.ISBN}}</td>
             <td><button class="btn btn-sm btn-secondary" routerLink="/categories/edit/{{category.id}}">Edit</button></td>
+            <td><button class="btn btn-sm btn-secondary" (click)="deleteCategory(category.id)">Delete</button></td>
         </tr>
     </tbody>
 </table>

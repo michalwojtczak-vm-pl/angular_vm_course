@@ -1,0 +1,6 @@
+
+<div [formGroup]="formBook">
+    <input class="form-group" formControlName="title" placeholder="title">
+    <button routerLink="/books/list">Anuluj</button>
+    <button (click)="save()" [disabled]="!formBook.valid">Zapisz</button>
+</div>
