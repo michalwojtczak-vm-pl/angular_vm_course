@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CategoryService } from '../../services/category.service';
 import { CategoryInterface } from '../../interfaces/category.interface';
-import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 import { CategorySubsService } from '../../services/category-subs.service';
 
@@ -22,7 +21,6 @@ export class CategoryEditComponent implements OnInit, OnDestroy {
       private activatedRoute: ActivatedRoute,
       private categoryService: CategoryService,
       private router: Router,
-      private http: HttpClient,
       private categorySubService: CategorySubsService
   ) { }
 
@@ -69,7 +67,7 @@ export class CategoryEditComponent implements OnInit, OnDestroy {
       return;
     }
 
-    this.categoryService.create(this.formCategory).subscribe((result) => {
+    this.categoryService.create(this.formCategory).subscribe(() => {
       const category = {
         ...this.category,
         ...this.formCategory.value

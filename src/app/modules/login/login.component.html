@@ -1,0 +1,12 @@
+<h1>Please log in!</h1>
+
+<div *ngIf="loginService?.loggedUser === undefined; else youAreLoggedIn" [formGroup]="loginForm">
+    <input type="text" class="form-group" formControlName="login" placeholder="login">
+    <input type="password" class="form-group" formControlName="password" placeholder="">
+    <button (click)="login()" [disabled]="!loginForm.valid">Log in!</button>
+</div>
+
+<ng-template #youAreLoggedIn>
+    <p>Hello {{loginService.loggedUser?.name}}! How are you today?</p>
+    <button (click)="logout()">Log out!</button>
+</ng-template>

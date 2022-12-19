@@ -29,6 +29,10 @@ export class CategoryService {
         return this.http.patch<CategoryInterface>(`/api/categories/${id}`, form.value);
     }
 
+    deleteRecord(categoryId: number) {
+        this.categories = this.categories.filter((c) => +c.id !== +categoryId);
+    }
+
     addRecord(category: CategoryInterface) {
         this.categories.push(category);
     }
