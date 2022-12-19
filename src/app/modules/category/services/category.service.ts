@@ -34,10 +34,27 @@ export class CategoryService {
     }
 
     updateRecord(category: CategoryInterface) {
-        let cat = this.categories.find((c) => +c.id === +category.id);
+        let cat = this.findCategory(category.id);
         if (cat) {
             cat.subject = category.subject;
             cat.ISBN = category.ISBN;
         }
+    }
+
+    delete(id: number) {
+        // return this.http.delete<CategoryInterface>(`/api/categories/${id}`); //gdyby mockserver był skonfigurowany
+        return this.http.delete<CategoryInterface>(`/api/categories/`);
+    }
+
+    deleteCategory(id: number) {
+        let cat = this.findCategory(id);
+        if(cat) {
+            const index = this.categories.indexOf(cat);
+            this.categories.splice(index, 1);
+        }
+    }
+
+    private findCategory(id: number) {
+        return this.categories.find((c) => +c.id === +id);
     }
 }

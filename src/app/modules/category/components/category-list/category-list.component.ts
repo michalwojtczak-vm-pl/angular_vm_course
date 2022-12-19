@@ -44,4 +44,12 @@ export class CategoryListComponent implements OnInit {
   loadCategories() {
     this.categoryService.loadData()
   }
+
+  deleteCategory(id: number) {
+    this.categoryService.delete(id).subscribe((result) => {
+      if(result) {
+        this.categoryService.deleteCategory(id);
+      }
+    })
+  }
 }
