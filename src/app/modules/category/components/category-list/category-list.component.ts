@@ -44,4 +44,8 @@ export class CategoryListComponent implements OnInit {
   loadCategories() {
     this.categoryService.loadData()
   }
+
+  deleteCategory(category: CategoryInterface) {
+    this.categoryService.deleteCategory(category);
+  }
 }

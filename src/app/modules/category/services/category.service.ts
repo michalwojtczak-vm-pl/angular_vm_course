@@ -40,4 +40,9 @@ export class CategoryService {
             cat.ISBN = category.ISBN;
         }
     }
+
+    deleteCategory(category: CategoryInterface) {
+        const index = this.categories.indexOf(category);
+        this.categories.splice(index, 1);
+    }
 }
