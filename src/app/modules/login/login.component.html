@@ -1,0 +1,6 @@
+<div  [formGroup]="loginForm">
+    <h1>Please log in!</h1>
+    <input type="text" class="form-group" formControlName="login" placeholder="login">
+    <input type="password" class="form-group" formControlName="password" placeholder="">
+    <button (click)="login()" [disabled]="!loginForm.valid">Log in!</button>
+</div>

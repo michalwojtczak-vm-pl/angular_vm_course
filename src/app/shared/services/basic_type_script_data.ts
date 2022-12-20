@@ -1,5 +1,5 @@
-import { CarInterface } from './car.interface';
-import { TypesEnum } from './types.enum';
+import { CarInterface } from '../interfaces/car.interface';
+import { TypesEnum } from '../enums/types.enum';
 
 export class NewClass {
     private carName = 'cos tam';

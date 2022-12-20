@@ -17,6 +17,15 @@ export class CategoryService {
         });
     }
 
+    loadDataPromise() {
+        return new Promise((resolve) => {
+            this.http.get<CategoryInterface[]>('/api/categories').subscribe((result) => {
+                this.categories = [...result, ...result];
+                return resolve(this.categories);
+            });
+        })
+    }
+
     getData(id: number) {
         return this.http.get<CategoryInterface>(`/api/categories/${id}`);
     }

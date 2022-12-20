@@ -1,4 +1,6 @@
 
+<app-button label="Pobierz 3 dane" (click)="loadAllDataAndFix()" btnLoading [loading]="isLoading"  ></app-button>
+
 <button class="btn btn-primary" routerLink="/categories/create">Utwórz nową kategorię</button>
 <table class="table">
     <thead>
@@ -11,7 +13,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let category of categories">
-            <td>{{category.id}}</td>
+            <td>{{category.id | currency:'PLN':'symbol'}}</td>
             <td>{{category.subject}}</td>
             <td>{{category.ISBN}}</td>
             <td><button class="btn btn-sm btn-secondary" routerLink="/categories/edit/{{category.id}}">Edit</button></td>

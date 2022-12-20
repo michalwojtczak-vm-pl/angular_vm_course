@@ -1,0 +1,18 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Type: text/html; charset=UTF-8
+
+[
+{
+    "id": 1,
+    "name": "123"
+},
+{
+    "id": 2,
+    "name": "123"
+},
+{
+    "id": 3,
+    "name": "123"
+}
+]
