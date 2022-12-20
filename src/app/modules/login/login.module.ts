@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {LoginService} from "./services/login.service";
 import {RouterModule, Routes} from "@angular/router";
 import {LoginComponent} from "./login.component";
+import {ReactiveFormsModule} from "@angular/forms";
 
 const routes: Routes = [
   {
@@ -14,10 +15,13 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [
+      LoginComponent
+  ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ReactiveFormsModule
   ],
   providers: [
       LoginService
